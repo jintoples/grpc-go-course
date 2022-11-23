@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package calculator;
+
+option go_package = "github.com/jintoples/grpc-go-course/calculator/proto";
+
+message CalcRequest {
+    int32 first_number = 1;
+    int32 second_number = 2;
+}
+
+message CalcResponse {
+    int32 result = 1;
+}
+
+message PrimeRequest {
+    int32 number = 1;
+}
+
+message PrimeResponse {
+    int32 result = 1;
+}
+
+message AvgRequest {
+    int32 number = 1;
+}
+
+message AvgResponse {
+    double result = 1;
+}
+
+service CalcService {
+    rpc Sum(CalcRequest) returns (CalcResponse);
+    rpc Prime(PrimeRequest) returns (stream PrimeResponse);
+    rpc avg(stream AvgRequest) returns (AvgResponse);
+}
