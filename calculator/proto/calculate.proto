@@ -29,8 +29,17 @@ message AvgResponse {
     double result = 1;
 }
 
+message HighRequest{
+    int32 number = 1;
+}
+
+message HighResponse {
+    int32 result = 1;
+}
+
 service CalcService {
     rpc Sum(CalcRequest) returns (CalcResponse);
     rpc Prime(PrimeRequest) returns (stream PrimeResponse);
     rpc avg(stream AvgRequest) returns (AvgResponse);
+    rpc Highest(stream HighRequest) returns (stream HighResponse);
 }

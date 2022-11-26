@@ -22,5 +22,6 @@ func main() {
 
 	//doCalc(calc)
 	//doCalcPrime(calc)
-	doAvg(calc)
+	//doAvg(calc)
+	doCalcHighest(calc)
 }

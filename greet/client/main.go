@@ -22,5 +22,6 @@ func main() {
 
 	//doGreet(c)
 	//doGrteetManyTimes(c)
-	doLongGreet(c)
+	//doLongGreet(c)
+	doGreetEveryone(c)
 }
